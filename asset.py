@@ -10,6 +10,7 @@ class Asset():
 	
 	entityId = None
 	acceptedKeys = []
+	pingProtocol = None
 	
 	def __init__(self):
 		print "HELLO ASSET"
@@ -21,3 +22,8 @@ class Asset():
 		
 	def emit(self):
 		return self.__dict__
+		
+	def ping(self, message=None):
+		"""Pings the asset according to its pingProtocol (Google GCM, iOS Push Notification, or other protocol)."""
+		
+		print "pinging asset"

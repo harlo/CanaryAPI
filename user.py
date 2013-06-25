@@ -27,7 +27,7 @@ class User(Asset):
 		
 		print "adding user %s to nest %s" % (self.entityId, nestId)
 		
-	def addToNest(self, nestId=None):
+	def removeFromNest(self, nestId=None):
 		"""Adds User to a Nest"""
 		self.nests.remove(nestId)
 		
