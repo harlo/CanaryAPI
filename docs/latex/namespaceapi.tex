@@ -1,0 +1,63 @@
+\hypertarget{namespaceapi}{\section{api Namespace Reference}
+\label{namespaceapi}\index{api@{api}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapi_1_1_canary_call}{Canary\-Call}
+\item 
+class \hyperlink{classapi_1_1_users}{Users}
+\item 
+class \hyperlink{classapi_1_1_user}{User}
+\item 
+class \hyperlink{classapi_1_1_nests}{Nests}
+\item 
+class \hyperlink{classapi_1_1_nest}{Nest}
+\item 
+class \hyperlink{classapi_1_1_devices}{Devices}
+\item 
+class \hyperlink{classapi_1_1_device}{Device}
+\item 
+class \hyperlink{classapi_1_1_ping}{Ping}
+\item 
+class \hyperlink{classapi_1_1_communicator}{Communicator}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple {\bfseries api}
+\item 
+\hypertarget{namespaceapi_a1125afafaabf4d39e0f633946f62eecd}{tuple {\bfseries http\-\_\-server} = tornado.\-httpserver.\-H\-T\-T\-P\-Server(api)}\label{namespaceapi_a1125afafaabf4d39e0f633946f62eecd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package Canary.Api
+
+The main API for the cloud-based service.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceapi_a5697ea202319f894facccacf78d93e89}{\index{api@{api}!api@{api}}
+\index{api@{api}!api@{api}}
+\subsubsection[{api}]{\setlength{\rightskip}{0pt plus 5cm}tuple api.\-api}}\label{namespaceapi_a5697ea202319f894facccacf78d93e89}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = tornado.web.Application([
+2     (\textcolor{stringliteral}{r"/users/"}, Users),
+3     (\textcolor{stringliteral}{r"/user/(.*)/"}, User, dict(userId = \textcolor{keywordtype}{None})),
+4     (\textcolor{stringliteral}{r"/nests/"}, Nests),
+5     (\textcolor{stringliteral}{r"/nest/(.*)/"}, Nest, dict(nestId = \textcolor{keywordtype}{None})),
+6     (\textcolor{stringliteral}{r"/nest/(.*)/communicator/"}, Communicator, dict(nestId = \textcolor{keywordtype}{None})),
+7     (\textcolor{stringliteral}{r"/devices/"}, Devices),
+8     (\textcolor{stringliteral}{r"/device/(.*)/"}, Device, dict(deviceId = \textcolor{keywordtype}{None})),
+9     (\textcolor{stringliteral}{r"/ping/(.*)/(.*)/"}, Ping, dict(entityId = \textcolor{keywordtype}{None}, action = \textcolor{keywordtype}{None})),
+10     
+11     (\textcolor{stringliteral}{r"/docs/(.*)"}, tornado.web.StaticFileHandler, \{\textcolor{stringliteral}{'path'}: globals.docs\_path\}),    \textcolor{comment}{# helpers; remove in
+       production}
+12     (\textcolor{stringliteral}{r"/communicator/"}, HailingFrequencyHandler),
+13     (\textcolor{stringliteral}{r"/js/socket.io.js"}, SocketIOHandler)
+14 ])
+\end{DoxyCode}

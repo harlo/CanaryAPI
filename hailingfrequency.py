@@ -1,5 +1,3 @@
-from os import path as op
-
 import tornado
 import tornado.web
 import tornado.httpserver
@@ -8,7 +6,6 @@ import tornadio2
 import tornadio2.router
 import tornadio2.conn
 
-ROOT = op.normpath(op.dirname(__file__))
 
 class HailingFrequencyHandler(tornado.web.RequestHandler):
 	def get(self):
@@ -45,7 +42,5 @@ hailing_frequency = tornadio2.router.TornadioRouter(Router)
 
 com = tornado.web.Application(
 	hailing_frequency.urls,
-	flash_policy_port = 843,
-	flash_policy_file = op.join(ROOT, 'flashpolicy.xml'),
 	socket_io_port = 5554
 )

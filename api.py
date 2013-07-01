@@ -2,7 +2,7 @@
 
 The main API for the cloud-based service.
 """
-import httplib2, ssl, os
+import httplib2, ssl
 
 import tornado.ioloop
 import tornado.web
@@ -14,6 +14,7 @@ import hailingfrequency
 from hailingfrequency import HailingFrequencyHandler, SocketIOHandler
 
 import user, nest, device
+import globals
 
 class CanaryCall():
 	def __init__(self, result=None):
@@ -189,8 +190,6 @@ class Communicator(tornado.web.RequestHandler):
 		canary_call = CanaryCall()
 		self.write(canary_call.emit())
 
-docs_path = os.path.join(os.path.normpath(os.path.dirname(__file__)), 'html')
-
 api = tornado.web.Application([
 	(r"/users/", Users),
 	(r"/user/(.*)/", User, dict(userId = None)),
@@ -201,7 +200,7 @@ api = tornado.web.Application([
 	(r"/device/(.*)/", Device, dict(deviceId = None)),
 	(r"/ping/(.*)/(.*)/", Ping, dict(entityId = None, action = None)),
 	
-	(r"/docs/(.*)", tornado.web.StaticFileHandler, {'path': docs_path}),	# helpers; remove in production
+	(r"/docs/(.*)", tornado.web.StaticFileHandler, {'path': globals.docs_path}),	# helpers; remove in production
 	(r"/communicator/", HailingFrequencyHandler),
 	(r"/js/socket.io.js", SocketIOHandler)
 ])
