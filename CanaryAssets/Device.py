@@ -27,12 +27,11 @@ class Device(Asset):
 				
 	def addToNest(self, nestId=None):
 		"""Adds Device to a Nest"""
-		self.nests.append(nestId)
+		
 		
 		print "adding user %s to nest %s" % (self.entityId, nestId)
 		
 	def removeFromNest(self, nestId=None):
 		"""Removes Device from a Nest"""
-		self.nests.remove(nestId)
 		
 		print "removing user %s from nest %s" % (self.entityId, nestId)
