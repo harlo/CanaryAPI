@@ -2,8 +2,18 @@
 
 User is a subclass of Asset
 """
-
+import copy
 from Asset import Asset
+
+profile = {
+	'alias': "",
+	'email': "",
+	'phone_number': "",
+	'address': "",
+	'city': "",
+	'state': "",
+	'zip': ""
+}
 
 class User(Asset):
 	"""The User class"""
@@ -12,6 +22,7 @@ class User(Asset):
 		super(User, self).__init__(inflate)
 		
 		self.nests = []
+		self.profile = copy.deepcopy(profile)
 			
 	def addToNest(self, nestId=None):
 		"""Adds User to a Nest"""

@@ -6,6 +6,7 @@ class Asset():
 	entityId = None
 	acceptedKeys = []
 	pingProtocol = None
+	assetCache = None
 	
 	def __init__(self, inflate=None):
 		print "HELLO ASSET"
