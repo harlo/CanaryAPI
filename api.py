@@ -134,6 +134,7 @@ class Device(tornado.web.RequestHandler):
 		
 	def get(self, deviceId):
 		"""GET: returns the Device matching specified id."""
+		print deviceId
 		
 		canary_call = CanaryCall()
 		self.write(canary_call.emit())
@@ -157,6 +158,17 @@ class Ping(tornado.web.RequestHandler):
 		
 	def post(self, entityId, actionId):
 		"""POST: sends a ping (event notification) to the specified entity, with action specified by the Action argument"""
+		
+		canary_call = CanaryCall()
+		self.write(canary_call.emit())
+		
+class Status(tornado.web.RequestHandler):
+	def initialize(self, entityId, status):
+		self.entityId = entityId
+		self.status = status
+		
+	def post(self, entityId, status):
+		"""POST: gets the requested status from the specified entity"""
 		
 		canary_call = CanaryCall()
 		self.write(canary_call.emit())
@@ -198,6 +210,7 @@ api = tornado.web.Application([
 	(r"/devices/", Devices),
 	(r"/device/(.*)/", Device, dict(deviceId = None)),
 	(r"/ping/(.*)/(.*)/", Ping, dict(entityId = None, action = None)),
+	(r"/status/(.*)/(.*)/", Status, dict(entityId = None, status = None)),
 	
 	(r"/docs/(.*)", tornado.web.StaticFileHandler, {'path': globals.docs_path}),	# helpers; remove in production
 	(r"/communicator/", HailingFrequencyHandler),
