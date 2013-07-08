@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['create',['create',['../classasset_1_1_asset.html#a7628151c7b06d24d0150107681e90f59',1,'asset.Asset.create()'],['../classdevice_1_1_device.html#a16b72d4e5916569c4fdbb99bc0850f9b',1,'device.Device.create()'],['../classnest_1_1_nest.html#a3e9ae5e34ea2f5fe44d9a8f2e42822dc',1,'nest.Nest.create()'],['../classuser_1_1_user.html#a537f4e3e8b43f40882b9b149e7adca2e',1,'user.User.create()']]]
+  ['calculatescore',['calculateScore',['../class_canary_models_1_1_model_1_1_model.html#afd755af4b83ed6b3559c2ebb3272c3cf',1,'CanaryModels::Model::Model']]],
+  ['create',['create',['../class_canary_assets_1_1_asset_1_1_asset.html#ab568c50f237defe61b7d0d058a547cc6',1,'CanaryAssets.Asset.Asset.create()'],['../class_canary_assets_1_1_device_1_1_device.html#ad06a4aeb7c5e74c4714874cce699ce4c',1,'CanaryAssets.Device.Device.create()'],['../class_canary_assets_1_1_nest_1_1_nest.html#a557e617357bf28fcd96d31d980deeff9',1,'CanaryAssets.Nest.Nest.create()'],['../class_canary_assets_1_1_user_1_1_user.html#a2d992ff2570cdd10b746ef0a82643b8e',1,'CanaryAssets.User.User.create()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['asset',['Asset',['../classasset_1_1_asset.html',1,'asset']]]
+  ['asset',['Asset',['../class_canary_assets_1_1_asset_1_1_asset.html',1,'CanaryAssets::Asset']]]
 ];

@@ -2,7 +2,7 @@
 
 The main API for the cloud-based service.
 """
-import httplib2, ssl
+import httplib2, ssl, sys
 
 import tornado.ioloop
 import tornado.web
@@ -13,7 +13,6 @@ import tornadio2.server
 import hailingfrequency
 from hailingfrequency import HailingFrequencyHandler, SocketIOHandler
 
-import user, nest, device
 import globals
 
 class CanaryCall():
@@ -206,6 +205,10 @@ api = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
+	from CanaryAssets.Device import Device as CanaryDevice
+	from CanaryAssets.Nest import Nest as CanaryNest
+	from CanaryAssets.User import User as CanaryUser	
+
 	http_server = tornado.httpserver.HTTPServer(api)
 	http_server.listen(5555)
 	

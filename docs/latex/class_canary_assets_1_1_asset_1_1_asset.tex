@@ -1,0 +1,68 @@
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset}{\section{Canary\-Assets.\-Asset.\-Asset Class Reference}
+\label{class_canary_assets_1_1_asset_1_1_asset}\index{Canary\-Assets.\-Asset.\-Asset@{Canary\-Assets.\-Asset.\-Asset}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset_a86ac77042148b8490907c19e59585002}{def {\bfseries \-\_\-\-\_\-init\-\_\-\-\_\-}}\label{class_canary_assets_1_1_asset_1_1_asset_a86ac77042148b8490907c19e59585002}
+
+\item 
+def \hyperlink{class_canary_assets_1_1_asset_1_1_asset_a9b0b6f19f09d50dea75071e5c5af494b}{inflate}
+\item 
+def \hyperlink{class_canary_assets_1_1_asset_1_1_asset_ab568c50f237defe61b7d0d058a547cc6}{create}
+\item 
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset_acf5d55e86c096f3319b4265d93e0f1c8}{def {\bfseries emit}}\label{class_canary_assets_1_1_asset_1_1_asset_acf5d55e86c096f3319b4265d93e0f1c8}
+
+\item 
+def \hyperlink{class_canary_assets_1_1_asset_1_1_asset_ab5655ab09219eb41b0f4b757f3cc339a}{ping}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset_afb1b09475cec8a2a41237a0678d5ec38}{{\bfseries entity\-Id} = None}\label{class_canary_assets_1_1_asset_1_1_asset_afb1b09475cec8a2a41237a0678d5ec38}
+
+\item 
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset_ad262abea1621878cbd0b397f0d54356b}{list {\bfseries accepted\-Keys} = \mbox{[}$\,$\mbox{]}}\label{class_canary_assets_1_1_asset_1_1_asset_ad262abea1621878cbd0b397f0d54356b}
+
+\item 
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset_ab425107a364d89337e3545ab54a6fc62}{{\bfseries ping\-Protocol} = None}\label{class_canary_assets_1_1_asset_1_1_asset_ab425107a364d89337e3545ab54a6fc62}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}The Asset superclass encapsulates all entities (Users, Nests, Devices).  Its acceptedKeys indicates which users may have access to its methods.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_canary_assets_1_1_asset_1_1_asset_ab568c50f237defe61b7d0d058a547cc6}{\index{Canary\-Assets\-::\-Asset\-::\-Asset@{Canary\-Assets\-::\-Asset\-::\-Asset}!create@{create}}
+\index{create@{create}!CanaryAssets::Asset::Asset@{Canary\-Assets\-::\-Asset\-::\-Asset}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}def Canary\-Assets.\-Asset.\-Asset.\-create (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{class_canary_assets_1_1_asset_1_1_asset_ab568c50f237defe61b7d0d058a547cc6}
+\begin{DoxyVerb}Creates a new Asset, and sets its id.\end{DoxyVerb}
+ \hypertarget{class_canary_assets_1_1_asset_1_1_asset_a9b0b6f19f09d50dea75071e5c5af494b}{\index{Canary\-Assets\-::\-Asset\-::\-Asset@{Canary\-Assets\-::\-Asset\-::\-Asset}!inflate@{inflate}}
+\index{inflate@{inflate}!CanaryAssets::Asset::Asset@{Canary\-Assets\-::\-Asset\-::\-Asset}}
+\subsubsection[{inflate}]{\setlength{\rightskip}{0pt plus 5cm}def Canary\-Assets.\-Asset.\-Asset.\-inflate (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{inflate}
+\end{DoxyParamCaption}
+)}}\label{class_canary_assets_1_1_asset_1_1_asset_a9b0b6f19f09d50dea75071e5c5af494b}
+\begin{DoxyVerb}Populates the Asset from values in the Canary Datastore.\end{DoxyVerb}
+ \hypertarget{class_canary_assets_1_1_asset_1_1_asset_ab5655ab09219eb41b0f4b757f3cc339a}{\index{Canary\-Assets\-::\-Asset\-::\-Asset@{Canary\-Assets\-::\-Asset\-::\-Asset}!ping@{ping}}
+\index{ping@{ping}!CanaryAssets::Asset::Asset@{Canary\-Assets\-::\-Asset\-::\-Asset}}
+\subsubsection[{ping}]{\setlength{\rightskip}{0pt plus 5cm}def Canary\-Assets.\-Asset.\-Asset.\-ping (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{message = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{class_canary_assets_1_1_asset_1_1_asset_ab5655ab09219eb41b0f4b757f3cc339a}
+\begin{DoxyVerb}Pings the asset according to its pingProtocol (Google GCM, iOS Push Notification, or other protocol).\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Canary\-Assets/Asset.\-py\end{DoxyCompactItemize}
