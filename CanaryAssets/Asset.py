@@ -15,11 +15,6 @@ class Asset():
 
 		print "inflating asset"
 		
-	def create(self):
-		"""Creates a new Asset, and sets its id."""
-
-		print "creating new asset"
-		
 	def emit(self):
 		return self.__dict__
 		

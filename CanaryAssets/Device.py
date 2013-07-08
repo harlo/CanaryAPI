@@ -21,13 +21,10 @@ status = {
 class Device(Asset):	
 	def __init__(self, inflate=None):
 		super(Device, self).__init__(inflate)
-				
-	def create(self):
-		"""Creates a new Device, and sets its id."""
-		super(Device, self).create()
-		
+
+		self.nest = Nest()
 		self.status = copy.deepcopy(status)
-		
+				
 	def addToNest(self, nestId=None):
 		"""Adds Device to a Nest"""
 		self.nests.append(nestId)

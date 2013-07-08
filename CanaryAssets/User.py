@@ -5,22 +5,14 @@ User is a subclass of Asset
 
 from Asset import Asset
 
-nests = []
-
 class User(Asset):
 	"""The User class"""
 	
 	def __init__(self, inflate=None):
 		super(User, self).__init__(inflate)
-			
-	def create(self):
-		"""Creates a new User, and sets its id."""
-		super(User, self).create()
 		
-		self.nests = nests
-					
-		print "creating new User as %s" % self.entityId
-	
+		self.nests = []
+			
 	def addToNest(self, nestId=None):
 		"""Adds User to a Nest"""
 		self.nests.append(nestId)
