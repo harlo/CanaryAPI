@@ -16,14 +16,18 @@ from hailingfrequency import HailingFrequencyHandler, SocketIOHandler
 import globals
 
 class CanaryCall():
-	def __init__(self, result=None):
+	def __init__(self, result=None, reason=None):
 		"""You may pass CanaryCall an object to set as its data (i.e. the result of a query).  If data is present, the result will automatically be set to 200 (OK)."""
+		
+		self.result = 403
+		
+		if reason is not None:
+			self.reason = reason
+			return
 		
 		if result is not None:
 			self.result = 200
-			self.data = result.emit()
-		else:
-			self.result = 403
+			self.data = result
 		
 	def emit(self):
 		"""Returns the CanaryCall object as a dict, which can be output as JSON"""
@@ -50,10 +54,8 @@ class User(tornado.web.RequestHandler):
 		
 	def get(self, userId):
 		"""GET: returns the User matching specified id."""
-		u = user.User()
-		u.create()	
 		
-		canary_call = CanaryCall(result = u)
+		canary_call = CanaryCall()
 		self.write(canary_call.emit())
 		
 	def post(self, userId):
