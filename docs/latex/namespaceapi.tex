@@ -20,6 +20,8 @@ class \hyperlink{classapi_1_1_device}{Device}
 \item 
 class \hyperlink{classapi_1_1_ping}{Ping}
 \item 
+class \hyperlink{classapi_1_1_status}{Status}
+\item 
 class \hyperlink{classapi_1_1_communicator}{Communicator}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
@@ -54,10 +56,11 @@ The main API for the cloud-based service.
 7     (\textcolor{stringliteral}{r"/devices/"}, Devices),
 8     (\textcolor{stringliteral}{r"/device/(.*)/"}, Device, dict(deviceId = \textcolor{keywordtype}{None})),
 9     (\textcolor{stringliteral}{r"/ping/(.*)/(.*)/"}, Ping, dict(entityId = \textcolor{keywordtype}{None}, action = \textcolor{keywordtype}{None})),
-10     
-11     (\textcolor{stringliteral}{r"/docs/(.*)"}, tornado.web.StaticFileHandler, \{\textcolor{stringliteral}{'path'}: globals.docs\_path\}),    \textcolor{comment}{# helpers; remove in
+10     (\textcolor{stringliteral}{r"/status/(.*)/(.*)/"}, Status, dict(entityId = \textcolor{keywordtype}{None}, status = \textcolor{keywordtype}{None})),
+11     
+12     (\textcolor{stringliteral}{r"/docs/(.*)"}, tornado.web.StaticFileHandler, \{\textcolor{stringliteral}{'path'}: globals.docs\_path\}),    \textcolor{comment}{# helpers; remove in
        production}
-12     (\textcolor{stringliteral}{r"/communicator/"}, HailingFrequencyHandler),
-13     (\textcolor{stringliteral}{r"/js/socket.io.js"}, SocketIOHandler)
-14 ])
+13     (\textcolor{stringliteral}{r"/communicator/"}, HailingFrequencyHandler),
+14     (\textcolor{stringliteral}{r"/js/socket.io.js"}, SocketIOHandler)
+15 ])
 \end{DoxyCode}

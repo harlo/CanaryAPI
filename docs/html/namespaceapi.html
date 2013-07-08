@@ -107,6 +107,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapi_1_1_ping.html">Ping</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapi_1_1_status.html">Status</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapi_1_1_communicator.html">Communicator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -141,18 +143,19 @@ The main API for the cloud-based service.
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    (<span class="stringliteral">r&quot;/devices/&quot;</span>, Devices),</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    (<span class="stringliteral">r&quot;/device/(.*)/&quot;</span>, Device, dict(deviceId = <span class="keywordtype">None</span>)),</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    (<span class="stringliteral">r&quot;/ping/(.*)/(.*)/&quot;</span>, Ping, dict(entityId = <span class="keywordtype">None</span>, action = <span class="keywordtype">None</span>)),</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    (<span class="stringliteral">r&quot;/docs/(.*)&quot;</span>, tornado.web.StaticFileHandler, {<span class="stringliteral">&#39;path&#39;</span>: globals.docs_path}),    <span class="comment"># helpers; remove in production</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    (<span class="stringliteral">r&quot;/communicator/&quot;</span>, HailingFrequencyHandler),</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    (<span class="stringliteral">r&quot;/js/socket.io.js&quot;</span>, SocketIOHandler)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;])</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    (<span class="stringliteral">r&quot;/status/(.*)/(.*)/&quot;</span>, Status, dict(entityId = <span class="keywordtype">None</span>, status = <span class="keywordtype">None</span>)),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    (<span class="stringliteral">r&quot;/docs/(.*)&quot;</span>, tornado.web.StaticFileHandler, {<span class="stringliteral">&#39;path&#39;</span>: globals.docs_path}),    <span class="comment"># helpers; remove in production</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    (<span class="stringliteral">r&quot;/communicator/&quot;</span>, HailingFrequencyHandler),</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    (<span class="stringliteral">r&quot;/js/socket.io.js&quot;</span>, SocketIOHandler)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;])</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 12:32:15 for Canary API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 12:42:51 for Canary API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
